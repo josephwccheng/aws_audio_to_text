@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+	font-family: 'Montserrat', sans-serif;
+	/* list-style: none; */
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background: white;
+	color: #63686e;
+}
+
+.wrapper{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 500px;
+	background: #fff;
+}
+
+.title{
+	background: #f3f4f8;
+	padding: 15px;
+	font-size: 18px;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+.file_upload_list li .file_item{
+	display: flex;
+	border-bottom: 1px solid #f3f4f8;
+    padding: 15px 20px;
+}
+.file_item .format{
+	background: #8178d3;	border-radius: 10px;
+	width: 45px;
+	height: 40px;
+	line-height: 40px;
+	color: #fff;
+	text-align: center;
+	font-size: 12px;
+	margin-right: 15px;
+}
+
+.file_item .file_progress{
+	width: calc(100% - 60px);
+	font-size: 14px;
+}
+
+.file_item .file_info,
+.file_item .file_size_wrap{
+	display: flex;
+	align-items: center;
+}
+.file_item .file_info{
+	justify-content: space-between;
+}
+.file_item .file_progress .progress{
+	width: 100%;
+	height: 4px;
+	background: #efefef;
+	overflow: hidden;
+	border-radius: 5px;
+	margin-top: 8px;
+	position: relative;
+}
+
+.file_item .file_progress .progress .inner_progress{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #58e380;
+}
+.file_item .file_size_wrap .file_size{
+	margin-right: 15px;
+}
+.file_item .file_size_wrap .file_close{
+	border: 1px solid #8178d3;
+	color: #8178d3;
+	width: 20px;
+	height: 20px;
+	line-height: 18px;
+	text-align: center;
+	border-radius: 50%;
+	font-size: 10px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.file_item .file_size_wrap .file_close:hover{
+	background: #8178d3;
+	color: #fff;
+}
+
+.choose_file label{
+	display: block;
+	border: 2px dashed #8178d3;
+	padding: 15px;
+	width: calc(100% - 20px);
+	margin: 10px;
+	text-align: center;
+	cursor: pointer;
+}
+.choose_file #choose_file{
+	outline: none;
+	opacity: 0;
+    width: 0;
+}
+.choose_file span{
+	font-size: 14px;
+	color: #8178d3;
+}
+
+.choose_file label:hover span{
+	text-decoration: underline;
+}
+
+button {
+	background-color: #db7f06;
+	border: none;
+	color: white;
+	padding: 16px 32px;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+	text-align: center;
+	float: right;
+	
+  }
+  input[type=submit], input[type=reset] {
+
+	border: none;
+	color: white;
+	padding: 16px 32px;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+	float: right;
+  }
+  input[type="file"] {
+    display: none;
+}
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+  }
+
+li.audio-file, li.transcribe-output-file{
+	border-bottom: 2px dashed #8178d3;
+	padding-left: 30px;
+	margin: 20px 0;
+}
+
+input#transcribeAudioFile, input#transcribeJobName {
+	min-height:30px;
+	min-width:500px;
+}
+
+textarea#transcribeOutput, textarea#comprehendOutput{
+	min-height:150px;
+	min-width:500px;	
+}
+
+/* Joseph added */
+table#sentimentTable, table#piiTable, table#entityTable, table#transcribe-table {
+	border-bottom: 2px dashed #8178d3;
+	margin: 20px 0;
+}
+
+#sentimentTable tr:nth-child(even){background-color: #f2f2f2;}
+#sentimentTable tr:hover {background-color: #ddd;}
+
+#piiTable tr:nth-child(even){background-color: #f2f2f2;}
+#piiTable tr:hover {background-color: #ddd;}
+
+#entityTable tr:nth-child(even){background-color: #f2f2f2;}
+#entityTable tr:hover {background-color: #ddd;}
+
+#transcribe-table tr:nth-child(even){background-color: #f2f2f2;}
+#transcribe-table tr:hover {background-color: #ddd;}
+
+
+#text-confidence {
+	max-width: 700px;
+	display: block;
+	overflow: auto;
+}
+#transcribe-text {
+	padding-right: 3px;
+	display: inline-block;
+}
+
+.veryLowConfidenceText {
+	color:red;
+}
+.lowConfidenceText {
+	color:yellow;
+}
+
+.fakeimg {
+	height: 200px;
+	background: #aaa;
+}
+
+.nav-link {
+	color: white;
+}
+
+.highlighted-text {
+	color: white;
+	background-color: #8178d3;
+}
